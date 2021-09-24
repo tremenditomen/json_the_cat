@@ -1,9 +1,9 @@
-const { breedfetcher } = require('../breedFetcher');
-const { assert } = require('chai');
+const {breedFetcher} = require('../breedFetcher');
+const {assert} = require('chai');
 
-describe('breedfetcher', () => {
+describe('breedFetcher', () => {
   it('returns a string description for a valid breed, via callback', (done) => {
-    breedfetcher('Siberian', (err, desc) => {
+    breedFetcher('Siberian', (err, desc) => {
       // we expect no error for this scenario
       assert.equal(err, null);
 
@@ -17,11 +17,13 @@ describe('breedfetcher', () => {
   });
 
   it ('returns Error if invalid/non-exsitent breed is passed in.',(done)=>{
-    breedfetcher('',(err,description)=>{
+    breedFetcher('',(err,desc)=>{
 
-        assert.equal(err,null)
-    })
+        assert.equal(desc,null)
+        assert.equal(expectedDesc,err);
+        done()
+    });
 
 
-  })
+  });
 });

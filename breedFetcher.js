@@ -25,4 +25,4 @@ const breedFetcher = () => {
   );
 };
 breedFetcher();
-module.exports = {breedFetcher};
+module.exports = { breedFetcher };

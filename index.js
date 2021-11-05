@@ -8,4 +8,4 @@ breedFetcher(breedName, (error, description) => {
     console.log(description);
   }
 });
-module.exports = { breedFetcher};
+module.exports = { breedFetcher };
